@@ -11,7 +11,7 @@
   * > sayHello("codeup") // returns "Hello, codeup!"
   */
  function sayHello(name) {
-  return "hello" + (name);
+  return "hello" + name;
  }
 
  /**
@@ -21,12 +21,8 @@
   *
   * console.log 'helloMessage' to check your work
   */
- function sayHello(name) {
-  return name
- }
-
- let helloMessage = sayHello("Damon")
- console.log(helloMessage)
+ let helloMessage = sayHello("Damon");
+ console.log(helloMessage);
  /**
   * TODO:
   * Store your name as a string in a variable named 'myName', and pass that
@@ -38,8 +34,8 @@
 // and stores it in a variable named random
  var random = Math.floor((Math.random() * 3) + 1);
 
- let myName = "Damon"
- sayHello(myName)
+ let myName = "Damon";
+ sayHello(myName);
  console.log(sayHello(myName))
 
  /**
@@ -60,7 +56,7 @@
   * number)
   */
  function isTwo(number) {
-  return number === 2
+  return number === 2;
  }
 
  console.log(random, isTwo(random))
@@ -77,7 +73,7 @@
   * > calculateTip(0.15, 33.42) // returns 5.013
   */
  function calculateTip(tip, total) {
-  return tip * total
+  return tip * total;
  }
 
  console.log(calculateTip(.25, 100))
