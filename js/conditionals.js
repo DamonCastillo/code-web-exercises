@@ -216,21 +216,3 @@ function evenOdd() {
 }
 
 evenOdd()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
