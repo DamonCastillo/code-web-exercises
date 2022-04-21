@@ -7,7 +7,8 @@ const randomBetween = (min, max) => Math.floor(Math.random() * (max - min + 1) +
 function showMutiplicationTable(num) {
     for (let i = 1; i < 11; i++) {
         let answer = i * num;
-        console.log(answer);
+        let str = num + ' x ' + i + ' = ' + answer
+        console.log(str);
     }
 }
 
