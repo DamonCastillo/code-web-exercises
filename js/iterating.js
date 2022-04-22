@@ -62,7 +62,7 @@ function second(array){
         console.log(second(names))
 function last(array){
     return array[array.length -1]
-}
-    console.log(last(names))
+        }
+         console.log(last(names))
 
 })();
