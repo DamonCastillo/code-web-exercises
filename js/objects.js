@@ -111,11 +111,12 @@
      *      ---
      *      ...
      */
-    for (let i = 0; i < books.length; i++) {
-        showBookInfo(books[i]);
-    }
+    let i = 1;
+    books.forEach(function (book) {
 
-    /**
+        console.log("Book # " + i++ + '\n Title: ' + book.title + '\n Author: ' + book.author.firstName + ' ' + book.author.lastName);
+    })
+        /**
      * Bonus:
      * - Create a function named `createBook` that accepts a title and author
      *   name and returns a book object with the properties described
@@ -140,7 +141,118 @@
     function showBookInfo(book) {
         console.log(" Title : " + book.title + "\nAuthor : " + book.author.firstName + " " + book.author.lastName)
     }
+
     showBookInfo({title: 'random aaaa', author: {firstName: 'sdasd', lastName: 'adsas '}})
 
+
+// Extra practice
+    function makeCar(make, model) {
+        return {make: make, model: model}
+    }
+
+    let saleReport = {
+        title: "Monthly Sales Report",
+        date: '03-17-2015',
+        office: 'CodeUp',
+        employee:
+            [{
+                employeeNumber: '1',
+                firstName: 'Jane',
+                lastName: 'Janeway',
+                salesUnit: 3,
+            },
+
+                {
+                    employeeNumber: 2,
+                    firstName: 'Tricia ',
+                    lastName: 'Triciason',
+                    salesUnit: 5,
+                },
+
+                {
+                    employeeNumber: 3,
+                    firstName: 'Jeanette',
+                    lastName: 'Jeanson',
+                    salesUnit: 4,
+                },
+
+                {
+                    employeeNumber: 4,
+                    firstName: 'Charles Emmerson III',
+                    lastName: 'Winchester',
+                    salesUnit: 2,
+                },
+
+                {
+                    employeeNumber: 5,
+                    firstName: 'Chet',
+                    lastName: 'Chedderson',
+                    salesUnit: 8,
+                },
+
+                {
+                    employeeNumber: 6,
+                    firstName: 'Chaiam',
+                    lastName: 'Chaiamason',
+                    salesUnit: 12,
+                },
+
+                {
+                    employeeNumber: 7,
+                    firstName: 'Dale',
+                    lastName: 'Dalesinger',
+                    salesUnit: 1,
+                },
+
+                {
+                    employeeNumber: 8,
+                    firstName: 'Zig',
+                    lastName: 'Zigler',
+                    salesUnit: 50,
+                },
+
+                {
+                    employeeNumber: 9,
+                    firstName: 'Henry',
+                    lastName: 'Kissinger',
+                    salesUnit: 1,
+                },
+
+                {
+                    employeeNumber: 10,
+                    firstName: 'Arthur Herbert',
+                    lastName: 'Fonzarelli',
+                    salesUnit: 23,
+                },
+
+                {
+                    employeeNumber: 11,
+                    firstName: 'Betty',
+                    lastName: ' Boop',
+                    salesUnit: 67,
+                }
+
+            ],
+        getEmployeeCount: function () {
+            return this.employee.length
+        },
+        getTotalSales: function () {
+            let total = 0;
+            for (let i = 0; i < this.employee.length; i++) {
+                total += this.employee[i].salesUnit;
+            }
+            return total;
+
+
+        } , totalAverageSales : function (){
+           return (this.getTotalSales() / this.getEmployeeCount())
+        }
+
+
+    };
+
+    console.log(saleReport.getEmployeeCount())
+    console.log(saleReport.getTotalSales())
+    console.log(saleReport.totalAverageSales())
 })
 ();
