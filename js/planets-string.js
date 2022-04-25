@@ -27,4 +27,6 @@
     console.log(newPlanet)
     document.body.innerHTML +=newPlanet
 
+    let planetNewList = "<ul><li>" + planetsArray.join('</li><li>') + ("</li></ul>")
+    document.body.innerHTML += planetNewList
 })();
