@@ -25,7 +25,6 @@
      */
   let newPlanet = planetsArray.join( "<br>")
     console.log(newPlanet)
-    let newNewPlanet = planetsArray.join("li")
-
+    document.body.innerHTML +=newPlanet
 
 })();
