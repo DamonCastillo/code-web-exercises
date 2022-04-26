@@ -43,7 +43,7 @@
      * and console.log the relevant messages for each person
      */
 
-    var shoppers = [
+    let shoppers = [
         {name: 'Cameron', amount: 180},
         {name: 'Ryan', amount: 250},
         {name: 'George', amount: 320}
@@ -116,7 +116,8 @@
 
         console.log("Book # " + i++ + '\n Title: ' + book.title + '\n Author: ' + book.author.firstName + ' ' + book.author.lastName);
     })
-        /**
+
+    /**
      * Bonus:
      * - Create a function named `createBook` that accepts a title and author
      *   name and returns a book object with the properties described
@@ -244,8 +245,8 @@
             return total;
 
 
-        } , totalAverageSales : function (){
-           return (this.getTotalSales() / this.getEmployeeCount())
+        }, totalAverageSales: function () {
+            return (this.getTotalSales() / this.getEmployeeCount())
         }
 
 
