@@ -33,3 +33,17 @@ for (let i = ".".length; i <= (max * max); i++) {
 //     }
 // }
 // fizzBuzz(i);
+
+//April 27th  Warm-ups
+    const animals =["dog", "cat", "Frog", "Bat"]
+
+    function firstLetter(animals){
+        let bucket = "";
+    for (let el in animals) {
+        bucket = +el[0]
+
+
+    }
+}
+firstLetter()
+
