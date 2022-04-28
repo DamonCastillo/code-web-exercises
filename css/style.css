@@ -1,4 +1,54 @@
 
 .fancy-header {
-    color: purple; /* single line comment */
+    color: orange; /* single line comment */
     text-decoration: underline;
+    text-align: center;
+
+
+}
+body{
+    background-color: grey;
+    text-decoration: orange;
+    background-image: url("../img/pexels-nout-gons-248159.jpeg");
+    height: 150vh;
+    background-size: cover;
+    color: orange;
+    font-family: 'Abel', sans-serif;
+}
+h2 {
+    color: orange;
+}
+ul{
+    list-style: square;
+    color: ghostwhite;
+}
+ol{
+    color: ghostwhite;
+}
+td{
+    color: ghostwhite;
+    padding: 10px;
+}
+tr{
+    padding: 5px;
+}
+/* unvisited link (:link) */
+a:link {
+    color:orange;
+}
+
+/* visited link (:visited) */
+a:visited {
+    color:purple;
+}
+
+/* mouse hover over link (:hover) */
+a:hover {
+    color:lightblue;
+}
+
+/* active/selected link (:active) */
+a:active {
+    color:whitesmoke;
+}
+
