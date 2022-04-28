@@ -16,11 +16,8 @@
         <input id="password" name="password" type="password" placeholder="Enter Password">
     </div>
     <div>
-       <h2>Bio</h2>
-        <textarea name="Bio" placeholder="Tell Us about yourself" ></textarea>
-    </div>
-    <div>
-        <button type="submit" >Login</button>
+        <h2>Bio</h2>
+        <textarea name="Bio" placeholder="Tell Us about yourself"></textarea>
     </div>
 </form>
 <h2> How Did You Hear About Us?</h2>
@@ -46,14 +43,21 @@
         Other
     </label>
 </form>
-<h2>Select Testing</h2>
-<label for="side">What Internet Browser do you use? </label>
-<select id="side" name="side">
-    <option>FireFox</option>
-    <option>Google Chrome</option>
-    <option> Internet Explorer</option>
-    <option>Safari</option>
-</select>
+<form method="POST" action="http://request-inspector.glitch.me/">
+    <h2>Select Testing</h2>
+    <label for="side">What Internet Browser do you use? </label>
+    <select id="side" name="side">
+        <option>FireFox</option>
+        <option>Google Chrome</option>
+        <option> Internet Explorer</option>
+        <option>Safari</option>
+    </select>
+    <br>
+    <br>
+    <div>
+        <button type="submit">Submit</button>
+
+    </div>
 
 </body>
 </html>
