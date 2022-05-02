@@ -11,7 +11,7 @@ body, html {
     background: #CDDEFF;
     color: #2D218B;
     padding: 15px;
-    border: 5px solid white;
+    border: 1px solid white;
     border-radius: 10px;
     margin: 5px;
 }
@@ -19,7 +19,7 @@ body, html {
     background: #CFF3DA;
     color: #367F4D;
     padding: 15px;
-    border: 5px solid white;
+    border: 1px solid white;
     border-radius: 10px;
     margin: 5px;
 
@@ -28,7 +28,7 @@ body, html {
     background: #FCFBC9;
     color: #A5963F;
     padding: 15px;
-    border: 5px solid white;
+    border: 1px solid white;
     border-radius: 10px;
     margin: 5px;
 
@@ -37,7 +37,7 @@ body, html {
     background: #FBD2D6;
     color: #8E2E41;
     padding: 15px;
-    border: 5px solid white;
+    border: 1px solid white;
     border-radius: 10px;
     margin: 5px;
 
