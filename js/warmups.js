@@ -49,14 +49,30 @@
 
 // April 28th Warm-ups
 
-function alphabetOrder(str){
-   // let strArray = str.split('');
-   // console.log(strArray)
-   //  let sortedArray = strArray.sort()
-   //  console.log(sortedArray);
-   // return sortedArray
+function alphabetOrder(str) {
+    // let strArray = str.split('');
+    // console.log(strArray)
+    //  let sortedArray = strArray.sort()
+    //  console.log(sortedArray);
+    // return sortedArray
     return str.split('').sort().join('')
 
 
 }
-console.log(alphabetOrder("codeup"))
+
+// console.log(alphabetOrder("codeup"))
+
+// function sumOfAllElements([a,b,c,d] ){
+//     const sum = [a,b,c,d ].reduce((partialSum, a) => partialSum + a, 0);
+//     console.log(sum);
+// }
+// sumOfAllElements([1,2,3,4,5])
+
+function sumOfAllElements(arr) {
+    let bucket = o;
+    for (let el of arr) {
+        bucket += el
+    }
+    return bucket
+}
+sumOfAllElements();
