@@ -48,17 +48,15 @@
 // firstLetter()
 
 // April 28th Warm-ups
-
-function alphabetOrder(str) {
+//
+// function alphabetOrder(str) {
     // let strArray = str.split('');
     // console.log(strArray)
     //  let sortedArray = strArray.sort()
     //  console.log(sortedArray);
     // return sortedArray
-    return str.split('').sort().join('')
+    // return str.split('').sort().join('')
 
-
-}
 
 // console.log(alphabetOrder("codeup"))
 
@@ -68,11 +66,39 @@ function alphabetOrder(str) {
 // }
 // sumOfAllElements([1,2,3,4,5])
 
-function sumOfAllElements(arr) {
-    let bucket = o;
-    for (let el of arr) {
-        bucket += el
-    }
-    return bucket
-}
-sumOfAllElements();
+// function sumOfAllElements(arr) {
+//     let bucket = o;
+//     for (let el of arr) {
+//         bucket += el
+//     }
+//     return bucket
+// }
+// sumOfAllElements();
+
+function returnProductEssentialDetails(product){
+    return {name: product.name,
+            priceInCents: product.priceInCents}
+            }
+            let product1 = {
+                name: 'Hammar',
+                priceInCents: 400,
+                description: 'It is a a hammar.',
+                inventory: 25034
+            }
+
+            let product2 = {
+                name: 'Computer',
+                priceInCents: 40000,
+                description: 'It is a computer.',
+                inventory: 33000
+            }
+
+            let product3 = {
+                name: 'Ruler',
+                priceInCents: 1000,
+                description: 'It is a ruler.',
+                inventory: 2200
+            }
+console.log(returnProductEssentialDetails(product1));;
+console.log(returnProductEssentialDetails(product2));;
+console.log(returnProductEssentialDetails(product3));;
