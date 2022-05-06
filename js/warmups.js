@@ -75,30 +75,32 @@
 // }
 // sumOfAllElements();
 
-function returnProductEssentialDetails(product){
-    return {name: product.name,
-            priceInCents: product.priceInCents}
-            }
-            let product1 = {
-                name: 'Hammar',
-                priceInCents: 400,
-                description: 'It is a a hammar.',
-                inventory: 25034
-            }
+// function returnProductEssentialDetails(product){
+//     return {name: product.name,
+//             priceInCents: product.priceInCents}
+//             }
+//             let product1 = {
+//                 name: 'Hammar',
+//                 priceInCents: 400,
+//                 description: 'It is a a hammar.',
+//                 inventory: 25034
+//             }
+//
+//             let product2 = {
+//                 name: 'Computer',
+//                 priceInCents: 40000,
+//                 description: 'It is a computer.',
+//                 inventory: 33000
+//             }
+//
+//             let product3 = {
+//                 name: 'Ruler',
+//                 priceInCents: 1000,
+//                 description: 'It is a ruler.',
+//                 inventory: 2200
+//             }
+// console.log(returnProductEssentialDetails(product1));;
+// console.log(returnProductEssentialDetails(product2));;
+// console.log(returnProductEssentialDetails(product3));;
 
-            let product2 = {
-                name: 'Computer',
-                priceInCents: 40000,
-                description: 'It is a computer.',
-                inventory: 33000
-            }
-
-            let product3 = {
-                name: 'Ruler',
-                priceInCents: 1000,
-                description: 'It is a ruler.',
-                inventory: 2200
-            }
-console.log(returnProductEssentialDetails(product1));;
-console.log(returnProductEssentialDetails(product2));;
-console.log(returnProductEssentialDetails(product3));;
+//Git review
