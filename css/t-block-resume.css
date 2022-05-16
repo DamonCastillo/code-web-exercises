@@ -1,0 +1,39 @@
+*{
+    font-family: 'Sarabun', sans-serif;
+}
+
+.line\> {
+    width: 100%;
+    height: 4px;
+    background: olivedrab;
+    margin: 10px auto;
+    border-radius: 5px;
+}
+@media (min-width: 768px){
+    header {
+        width: 100%; !important;
+        margin: auto;
+    }
+    .col-lg-3{
+        width: 100%;
+    }
+    .first-container{
+        width: calc(40% - 2em);
+        margin-right: 2em;
+        float: left;
+    }
+    .second-container{
+        width: calc(60% - 2em);
+        margin-left: 2em;
+        float: left;
+    }
+    ul {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .first-container ul {
+        display: flex;
+        flex-direction: column;
+
+    }
+}

@@ -50,12 +50,12 @@
 // April 28th Warm-ups
 //
 // function alphabetOrder(str) {
-    // let strArray = str.split('');
-    // console.log(strArray)
-    //  let sortedArray = strArray.sort()
-    //  console.log(sortedArray);
-    // return sortedArray
-    // return str.split('').sort().join('')
+// let strArray = str.split('');
+// console.log(strArray)
+//  let sortedArray = strArray.sort()
+//  console.log(sortedArray);
+// return sortedArray
+// return str.split('').sort().join('')
 
 
 // console.log(alphabetOrder("codeup"))
@@ -104,47 +104,87 @@
 // console.log(returnProductEssentialDetails(product3));;
 
 //Git review
+//
+// const hamsters = [
+//     {
+//         name: "Hamtaro",
+//         heightInMM: 86,
+//         fur: ['orange', 'white'],
+//         gender: "male",
+//         dateOfBirth: "August 6"
+//     } , {
+//         name: "Bijou",
+//         heightInMM: 75,
+//         fur: ['white'],
+//         gender: "female",
+//         dateOfBirth: "July 10"
+//     } , {
+//         name: "Oxnard",
+//         heightInMM: 100,
+//         fur: ['grey', 'white'],
+//         gender: "male",
+//         dateOfBirth: "May 3"
+//     } , {
+//         name: "Boss",
+//         heightInMM: 120,
+//         fur: ['brown', 'white'],
+//         gender: "male",
+//         dateOfBirth: "Spetember 21"
+//     } , {
+//         name: "Snoozer",
+//         heightInMM: 85,
+//         fur: ['brown', 'white', "pink"],
+//         gender: "male",
+//         dateOfBirth: "January 14"
+//     }
+// ];
 
-const hamsters = [
-    {
-        name: "Hamtaro",
-        heightInMM: 86,
-        fur: ['orange', 'white'],
-        gender: "male",
-        dateOfBirth: "August 6"
-    } , {
-        name: "Bijou",
-        heightInMM: 75,
-        fur: ['white'],
-        gender: "female",
-        dateOfBirth: "July 10"
-    } , {
-        name: "Oxnard",
-        heightInMM: 100,
-        fur: ['grey', 'white'],
-        gender: "male",
-        dateOfBirth: "May 3"
-    } , {
-        name: "Boss",
-        heightInMM: 120,
-        fur: ['brown', 'white'],
-        gender: "male",
-        dateOfBirth: "Spetember 21"
-    } , {
-        name: "Snoozer",
-        heightInMM: 85,
-        fur: ['brown', 'white', "pink"],
-        gender: "male",
-        dateOfBirth: "January 14"
+// function getTallest(arr) {
+//     let tallest = {heightInMM: 0};
+//     for (let hamster of arr) {
+//         if (hamster.heightInMMv > tallest.heightInMM) {
+//             tallest = hamster
+//         }
+//     }
+// }
+// console.log(getTallest(hamsters));
+
+// function getColorful(arr) {
+//     let colorful = {fur: []};
+//     for (let hamster of hamsters){
+//         if (hamster.fur.length > colorful.fur.length){
+//             colorful = hamster
+//         }
+//     }
+//     return colorful
+//
+// }
+// console.log(getColorful(hamsters))
+
+
+// My incomplete Attempt
+function makeObjectFromString(arr) {
+    let str = {arr: [""]};
+    for (let str of arr) {
+
     }
-];
 
-function getTallest(arr) {
-    let tallest = {heightInMM: 0};
-    for (let hamster of arr) {
-        if (hamster.heightInMMv > tallest.heightInMM) {
-            tallest = hamster
+// instructor's Code
+
+    function makeObjectFromString(str) {
+        const obj = {};
+        obj.string = str;
+        obj.size = str.length;
+        obj.isOneWord = str.indexOf("") < 0;
+        let lc = str.toLowerCase()
+        if (lc.includes("r") || lc.includes("s") || lc.includes("t") || lc.includes("l") || lc.includes("n") || lc.includes("e")){
+            obj.containsLetterFromRSTILNE = true;
+        } else {
+            obj.containsLetterFromRSTILNE = false;
         }
     }
+
+    return obj;
+
+
 }
-console.log(getTallest(hamsters));
