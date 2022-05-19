@@ -163,28 +163,30 @@
 
 
 // My incomplete Attempt
-function makeObjectFromString(arr) {
-    let str = {arr: [""]};
-    for (let str of arr) {
-
-    }
+// function makeObjectFromString(arr) {
+//     let str = {arr: [""]};
+//     for (let str of arr) {
+//
+//     }
 
 // instructor's Code
 
-    function makeObjectFromString(str) {
-        const obj = {};
-        obj.string = str;
-        obj.size = str.length;
-        obj.isOneWord = str.indexOf("") < 0;
-        let lc = str.toLowerCase()
-        if (lc.includes("r") || lc.includes("s") || lc.includes("t") || lc.includes("l") || lc.includes("n") || lc.includes("e")){
-            obj.containsLetterFromRSTILNE = true;
-        } else {
-            obj.containsLetterFromRSTILNE = false;
-        }
-    }
+    // function makeObjectFromString(str) {
+    //     const obj = {};
+    //     obj.string = str;
+    //     obj.size = str.length;
+    //     obj.isOneWord = str.indexOf("") < 0;
+    //     let lc = str.toLowerCase()
+    //     if (lc.includes("r") || lc.includes("s") || lc.includes("t") || lc.includes("l") || lc.includes("n") || lc.includes("e")) {
+    //         obj.containsLetterFromRSTILNE = true;
+    //     } else {
+    //         obj.containsLetterFromRSTILNE = false;
+    //     }
+    // }
+    //
+    // return obj;
 
-    return obj;
 
 
-}
+console.log(10 % 3);
+
