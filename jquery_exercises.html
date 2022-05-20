@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jquery Exercises</title>
+    <link rel="stylesheet" href="css/jquery.css">
+</head>
+<body>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script>
+    $(function () {
+        // let contents = $('#heading').html();
+        // alert(contents);
+        // $('.codeup').css('border','1px solid red')
+        // $('li').css('font-size', '20px')
+        // let contents = $('#heading').html();
+        // alert(contents);
+        // $('h1, p , li ').css('background-color', ' #FFFF00')
+        $('#heading').click(function (){
+            $(this).css('background-color', 'lightgray');
+        })
+        $('#pContent').dblclick(function (e){
+            $(this).css('font-size', '18px');
+        })
+        $('li').hover(
+            function() {
+                $(this).css('color', 'blue');
+            },
+            function() {
+               $(this).css('color', 'purple');
+            }
+
+        );
+
+
+    })
+
+</script>
+<h1 id="heading" class="codeup"> The Exercise!!</h1>
+<div>
+    <p class="codeup" id="pContent">
+        <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur enim porro provident! At autem delectus et exercitationem inventore iste laborum, molestias nam odit perferendis provident quaerat quas repudiandae soluta voluptate!</span><span>Atque expedita illo incidunt ipsa iste labore magni modi nulla placeat ut? Consectetur culpa deleniti dolor doloremque dolorum impedit modi, officia pariatur, quam quis quo quos rerum sit? Distinctio, enim?</span><span>Amet assumenda, blanditiis eaque earum eius et facilis incidunt iste, itaque nesciunt obcaecati perspiciatis quam repudiandae vero voluptate? Alias commodi dicta iure laudantium natus odit, recusandae sapiente sed. Ad, animi.</span><span>Ab autem cum cumque, delectus dolorem eum facere incidunt iusto laborum maxime modi molestiae molestias nesciunt nulla officia provident quae quam quia rem repellat repudiandae rerum sed ullam unde voluptatum.</span><span>Quibusdam similique tempora tenetur. Alias assumenda autem delectus dignissimos, eius est fugiat harum id illo ipsam iste minima, molestias necessitatibus nemo neque odit optio praesentium quasi quibusdam reprehenderit sint suscipit?</span>
+    </p>
+    <ul class="codeup" id="list-hover">
+        <li>Boxing</li>
+        <li>Muay Thai</li>
+        <li>BJJ</li>
+        <li>Kickboxing</li>
+    </ul>
+</div>
+<h2 id="demo01">1. Zoom into the box</h2>
+<div class="hover01 column">
+    <div>
+        <figure><img src="../img/30x30.svg" /></figure>
+        <figure><img src="../img/30x30.svg" /></figure>
+        <figure><img src="../img/30x30.svg" /></figure>
+    </div>
+</div>
+
+</body>
+</html>
