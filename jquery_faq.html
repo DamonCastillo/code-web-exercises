@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Faq</title>
+    <link rel="stylesheet" href="css/jquery_faq.css">
+</head>
+<body>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+<p>10 Facts about National Parks</p>
+<button class="btn btn-block">Change</button>
+
+<dl>
+    <dt>Death Valley</dt>
+    <dd>Recorded one of the hottest temperatures on Earth at 134 Degrees</dd>
+
+    <dt>Sequoia</dt>
+    <dd>Largest Trees</dd>
+
+    <dt>Contains Alaskan Brown Bears</dt>
+    <dd>One of the Largest Predators on the planet</dd>
+
+    <dt>Grand Canyon</dt>
+    <dd>One of the Seven Wonders of the world</dd>
+
+    <dt>Ribbon Falls</dt>
+    <dd>Waterfall Nine Times Taller Than Niagara Falls</dd>
+
+    <dt>Mount McKinley</dt>
+    <dd>Highest Point out of all Parks</dd>
+
+    <dt>Mammoth Cave</dt>
+    <dd>One of the longest cave systems in the world.</dd>
+
+    <dt>Carlsbad Caverns</dt>
+    <dd>Home to the deepest cave</dd>
+
+    <dt>Crater Lake</dt>
+    <dd>Home to the deepest lake in the US</dd>
+
+    <dt>YellowStone Caldera</dt>
+    <dd>Home to One of Three Super Volcano</dd>
+</dl>
+<script>
+
+    $(function () {
+        $('.btn').click(function (){
+            $('dd').toggle('invisible')
+        })
+    $('dt').click(function (){
+        $(this).css('background', '#ffff00')
+
+    })
+
+
+
+
+    })
+
+
+</script>
+
+
+</body>
+</html>

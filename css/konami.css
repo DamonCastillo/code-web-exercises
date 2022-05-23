@@ -1,0 +1,35 @@
+body{
+    background: black;
+    background-image: url("../img/bg-fight.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    /*background-position: center center;*/
+}
+#title-blinker{
+    margin-top: 400px;
+    animation-name: blinker;
+    animation-duration: 1.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+@keyframes blinker
+{
+    0%{opacity: 1.0}
+    50%{opacity: 0.0}
+    100%{opacity: 1.0}
+}
+#goku{
+    transform: scaleX(-1);
+
+}
+#akuma{
+
+}
+img{
+    margin-top: 400px;
+    height: 180px;
+
+}
+#fighters{
+
+}
