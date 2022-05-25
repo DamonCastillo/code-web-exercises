@@ -1,0 +1,146 @@
+#cardTemplate {
+    position: absolute;
+}
+
+#cardFace {
+    position: absolute;
+    z-index: -1;
+    width: 320px;
+    top: 100px;
+    left: 50px;
+}
+
+#cardTitle {
+    font-family: 'Didact Gothic', sans-serif;
+    font-size: 25px;
+    position: absolute;
+    left: 40px;
+    top: 18px;
+}
+
+/* star levels */
+#starLevel {
+    position: absolute;
+    width: 22px;
+    left: 340px;
+    top: 80px;
+}
+
+#starLevel2 {
+    position: absolute;
+    width: 22px;
+    left: 315px;
+    top: 80px;
+}
+#starLevel3 {
+    position: absolute;
+    width: 22px;
+    left: 290px;
+    top: 80px;
+}
+#starLevel4 {
+    position: absolute;
+    width: 22px;
+    left: 265px;
+    top: 80px;
+    visibility: hidden;
+}
+#starLevel5 {
+    position: absolute;
+    width: 22px;
+    left: 240px;
+    top: 80px;
+    visibility: hidden;
+}
+#starLevel6 {
+    position: absolute;
+    width: 22px;
+    left: 215px;
+    top: 80px;
+    visibility: hidden;
+}
+#starLevel7 {
+    position: absolute;
+    width: 22px;
+    left: 190px;
+    top: 80px;
+    visibility: hidden;
+}
+#starLevel8 {
+    position: absolute;
+    width: 22px;
+    left: 165px;
+    top: 80px;
+    visibility: hidden;
+}
+#starLevel9 {
+    position: absolute;
+    width: 22px;
+    left: 140px;
+    top: 80px;
+    visibility: hidden;
+}
+#starLevel10 {
+    position: absolute;
+    width: 22px;
+    left: 115px;
+    top: 80px;
+    visibility: hidden;
+}
+#starLevel11 {
+    position: absolute;
+    width: 22px;
+    left: 90px;
+    top: 80px;
+    visibility: hidden;
+
+}
+#starLevel12 {
+    position: absolute;
+    width: 22px;
+    left: 65px;
+    top: 80px;
+    visibility: hidden;
+}
+
+/* end of star levels */
+
+#cardType {
+    position: absolute;
+    width: 25px;
+    left: 350px;
+    top: 40px;
+}
+
+#monsterType {
+    position: absolute;
+    left: 40px;
+    top: 425px;
+}
+
+#monsterDescription {
+    position: absolute;
+    left: 40px;
+    top: 455px;
+    font-size: 12px;
+    max-width: 335px;
+    font-style: italic;
+}
+
+#monsterAtk {
+    position: absolute;
+    left: 262px;
+    top: 522px;
+    font-size: 14px;
+    max-width: 335px;
+    font-weight: bold;
+}
+
+#monsterDef {
+    position: absolute;
+    left: 342px;
+    top: 522px;
+    font-size: 14px;
+    max-width: 335px;
+    font-weight: bold;
+}

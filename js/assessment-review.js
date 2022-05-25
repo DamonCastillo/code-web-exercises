@@ -16,7 +16,7 @@ function evenOrOdd(input) {
         return "odd"
     }
 }
-
+a
 //3
 function doubleTheElement(arr) {
     let double = []
@@ -100,7 +100,7 @@ function describeNumber(num){
 function screamingSnakeCase(str){
     let upperCaseStr = str.toUpperCase();
     let array = upperCaseStr.split(' ')
-    let finalStr = array.join(' ')
+    let finalStr = array.join('_')
     return finalStr;
 
 

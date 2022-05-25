@@ -1,12 +1,4 @@
-.invisible {
-    display: none;
-}
 
-dt {
-    width: fit-content;
-}
-.highlighted {
-
-    text-decoration: #ffff00;
-    width: fit-content;
+.highlight {
+    background: #ffe066;
 }

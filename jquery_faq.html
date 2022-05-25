@@ -9,52 +9,90 @@
 <script src="https://code.jquery.com/jquery-2.2.4.min.js"
         integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 
-<p>10 Facts about National Parks</p>
+<!--<p>10 Facts about National Parks</p>-->
 <button class="btn btn-block">Change</button>
 
-<dl>
-    <dt>Death Valley</dt>
-    <dd>Recorded one of the hottest temperatures on Earth at 134 Degrees</dd>
+<!--<dl>-->
+<!--    <dt>Death Valley</dt>-->
+<!--    <dd>Recorded one of the hottest temperatures on Earth at 134 Degrees</dd>-->
 
-    <dt>Sequoia</dt>
-    <dd>Largest Trees</dd>
+<!--    <dt>Sequoia</dt>-->
+<!--    <dd>Largest Trees</dd>-->
 
-    <dt>Contains Alaskan Brown Bears</dt>
-    <dd>One of the Largest Predators on the planet</dd>
+<!--    <dt>Contains Alaskan Brown Bears</dt>-->
+<!--    <dd>One of the Largest Predators on the planet</dd>-->
 
-    <dt>Grand Canyon</dt>
-    <dd>One of the Seven Wonders of the world</dd>
+<!--    <dt>Grand Canyon</dt>-->
+<!--    <dd>One of the Seven Wonders of the world</dd>-->
 
-    <dt>Ribbon Falls</dt>
-    <dd>Waterfall Nine Times Taller Than Niagara Falls</dd>
+<!--    <dt>Ribbon Falls</dt>-->
+<!--    <dd>Waterfall Nine Times Taller Than Niagara Falls</dd>-->
 
-    <dt>Mount McKinley</dt>
-    <dd>Highest Point out of all Parks</dd>
+<!--    <dt>Mount McKinley</dt>-->
+<!--    <dd>Highest Point out of all Parks</dd>-->
 
-    <dt>Mammoth Cave</dt>
-    <dd>One of the longest cave systems in the world.</dd>
+<!--    <dt>Mammoth Cave</dt>-->
+<!--    <dd>One of the longest cave systems in the world.</dd>-->
 
-    <dt>Carlsbad Caverns</dt>
-    <dd>Home to the deepest cave</dd>
+<!--    <dt>Carlsbad Caverns</dt>-->
+<!--    <dd>Home to the deepest cave</dd>-->
 
-    <dt>Crater Lake</dt>
-    <dd>Home to the deepest lake in the US</dd>
+<!--    <dt>Crater Lake</dt>-->
+<!--    <dd>Home to the deepest lake in the US</dd>-->
 
-    <dt>YellowStone Caldera</dt>
-    <dd>Home to One of Three Super Volcano</dd>
-</dl>
+<!--    <dt>YellowStone Caldera</dt>-->
+<!--    <dd>Home to One of Three Super Volcano</dd>-->
+<!--</dl>-->
+<h3>Yosemite</h3>
+<ul>
+    <li>400 Species of Animals</li>
+    <li>Has one of the tallest Waterfalls</li>
+    <li>Placed a bid to hold a Winter Olypmics</li>
+    <li>Can see rainbows at night</li>
+</ul>
+<h3>YellowStone</h3>
+<ul>
+    <li>500 Active Geysers</li>
+    <li>Highest Elevation Lake</li>
+    <li>Largest Concentration of Mammals</li>
+    <li>285 species of Birds</li>
+</ul>
+<h3>Grand Teton</h3>
+<ul>
+    <li>Established in 1929</li>
+    <li>Established again in 1950</li>
+    <li>Glaciers on the mountains</li>
+    <li>First Mountain man Discovered</li>
+</ul>
+<h3>Arches </h3>
+<ul>
+    <li> Highest Concentration of Natural Arches</li>
+    <li>Used to be all under water</li>
+    <li>Only gets 8-10inches of rain a year</li>
+    <li>754 known species of plants and animals</li>
+</ul>
 <script>
 
     $(function () {
-        $('.btn').click(function (){
-            $('dd').toggle('invisible')
+        // $('.btn').click(function () {
+        //     $('dd').toggle('invisible')
+        // })
+        // $('dt').click(function () {
+        //     $(this).css('background', '#ffff00')
+        //
+        // })
+        $('.btn').click(function () {
+            $('ul').each(function () {
+                $(this).children().last().toggleClass('highlight')
+            })
         })
-    $('dt').click(function (){
-        $(this).css('background', '#ffff00')
+        $('h3').click(function () {
+            $(this).next().css('font-weight', "bold")
 
-    })
-
-
+        })
+        $('ul').click(function () {
+            $(this).children().first().css("color", "blue")
+        })
 
 
     })
