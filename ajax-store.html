@@ -2,36 +2,116 @@
 <html>
 <head>
     <title>Online Store</title>
+    <style>
+        table {
+            margin: 0 auto;
+            font-size: large;
+            border: 1px solid black;
+
+            background-color: gray;
+        }
+
+        h1 {
+            text-align: center;
+            color: blue;
+            font-size: xx-large;
+            font-family: 'Gill Sans',
+            'Gill Sans MT', ' Calibri',
+            'Trebuchet MS', 'sans-serif';
+
+        }
+
+        td {
+            background-color: lightblue;
+            border: 10px solid black;
+        }
+
+        th,
+        td {
+            font-weight: bold;
+            border: 3px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        td {
+            font-weight: lighter;
+        }
+    </style>
 </head>
 <body>
 
+
 <h1>My Tool Store</h1>
 
-<table id="products">
-    <thead>
+<section>
+    <table id="products">
+        <thead>
         <tr>
             <th>Title</th>
             <th>Quantity</th>
             <th>Price</th>
             <th>Categories</th>
         </tr>
-    </thead>
-    <tbody id="insertProducts"></tbody>
-</table>
+        </thead>
+        <tbody id="insertProducts"></tbody>
+    </table>
 
-<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+            integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 
-<script>
-(function() {
-    "use strict";
-    // TODO: Create an AJAX GET request for the file under data/inventory.json
+    <script>
+        (function () {
+            "use strict";
+            // TODO: Create an AJAX GET request for the file under data/inventory.json
+            $.get("data/inventory.json").done(function (data) {
 
-    // TODO: Take the data from inventory.json and append it to the products table
-    //       HINT: Your data should come back as a JSON object; use console.log() to inspect
-    //             its contents and fields
-    //       HINT: You will want to target #insertProducts for your new HTML elements
-})();
-</script>
+            })
+            // TODO: Take the data from inventory.json and append it to the products table
+            //       HINT: Your data should come back as a JSON object; use console.log() to inspect
+            //             its contents and fields
+            //       HINT: You will want to target #insertProducts for your new HTML elements
+
+            $(document).ready(function () {
+
+                // FETCHING DATA FROM JSON FILE
+                $.getJSON("data/inventory.json",
+                    function (data) {
+                        let tool = '';
+
+                        // ITERATING THROUGH OBJECTS
+                        $.each(data, function (key, value) {
+
+                            //CONSTRUCTION OF ROWS HAVING
+                            // DATA FROM JSON OBJECT
+                            tool += '<tr>';
+                            tool += '<td>' +
+                                value.title + '</td>';
+
+                            tool += '<td>' +
+                                value.quantity + '</td>';
+
+                            tool += '<td>' +
+                                value.price + '</td>';
+
+                            tool += '<td>' +
+                                value.categories + '</td>';
+
+                            tool += '</tr>';
+                        });
+
+                        //INSERTING ROWS INTO TABLE
+                        $('#products').append(tool);
+                    });
+
+            });
+
+
+
+        })();
+    </script>
+</section>
+<button onClick="window.location.reload();" style=" display: flex">Refresh Page</button>
 
 </body>
 </html>
