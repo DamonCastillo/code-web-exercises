@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Map Projects</title>
+    <link rel="stylesheet" href="css/weather_map.css">
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.css' rel='stylesheet'/>
+</head>
+<body>
+<script src="js/jquery.js"></script>
+<script src="js/keys.js"></script>
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js'></script>
+<script src="js/geocode-utils.js"></script>
+<script src="js/weather_map.js"></script>
+<div id='map' style='width: 100vw; height: 100vh; margin: 0'></div>
+<h1 id="place"></h1>
+<script>
+    mapboxgl.accessToken = MAP_API_KEY;
+    const map = new mapboxgl.Map({
+        container: 'map', // container ID
+        style: 'mapbox://styles/mapbox/streets-v11', // style URL
+        center: [-98.4946, 29.4252], // starting position [lng, lat]
+        zoom: 9 // starting zoom
+
+    });
+
+    // Create a new marker.
+    const marker = new mapboxgl.Marker()
+        .setLngLat([-98.4946, 29.4252])
+        .setDraggable(true)
+        .addTo(map)
+    ;
+
+
+    marker.setLngLat([-98.4946, 29.4252])
+
+</script>
+<main>
+    <!--1st Day-->
+    <div class="flip-card">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <img src="img/png/day_clear.png" alt="Clear">
+            </div>
+            <div class="flip-card-back">
+                <h1>Sunny</h1>
+                <p> 0% Chance Of Rain </p>
+                <p>72°F</p>
+            </div>
+        </div>
+    </div>
+    <!--2nd Day-->
+    <div class="flip-card">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <img src="img/png/day_clear.png" alt="Clear">
+            </div>
+            <div class="flip-card-back">
+                <h1>Sunny</h1>
+                <p> 0% Chance Of Rain </p>
+                <p>72°F</p>
+            </div>
+        </div>
+    </div>
+    <!--3rd Day-->
+    <div class="flip-card">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <img src="img/png/day_clear.png" alt="Clear">
+            </div>
+            <div class="flip-card-back">
+                <h1>Sunny</h1>
+                <p> 0% Chance Of Rain </p>
+                <p>72°F</p>
+            </div>
+        </div>
+    </div>
+    <!--4th Day -->
+    <div class="flip-card">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <img src="img/png/day_clear.png" alt="Clear">
+            </div>
+            <div class="flip-card-back">
+                <h1>Sunny</h1>
+                <p> 0% Chance Of Rain </p>
+                <p>72°F</p>
+            </div>
+        </div>
+    </div>
+    <!--5th Day-->
+    <div class="flip-card">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <img src="img/png/day_clear.png" alt="Clear">
+            </div>
+            <div class="flip-card-back">
+                <h1>Sunny</h1>
+                <p> 0% Chance Of Rain </p>
+                <p>72°F</p>
+            </div>
+        </div>
+    </div>
+</main>
+</body>
+</html>
