@@ -15,6 +15,10 @@ img{
     border-radius: 10px;
 
 }
+.flip-card:hover {
+    transform: scale(1.05);
+    animation-delay: 1s;
+}
 
 /* This container is needed to position the front and back side */
 .flip-card-inner {
@@ -29,6 +33,7 @@ img{
 /* Do an horizontal flip when you move the mouse over the flip box container */
 .flip-card:hover .flip-card-inner {
     transform: rotateY(180deg);
+
 }
 
 /* Position the front and back side */
@@ -53,6 +58,7 @@ img{
     color: white;
     transform: rotateY(180deg);
     border-radius: 30px;
+
 }
 
 main{
@@ -60,7 +66,17 @@ main{
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    padding-top: 2em;
 }
 #map{
     position: absolute;
+}
+#blur{
+    width: 100vw;
+    height: 100vw;
+    position: absolute;
+    backdrop-filter: blur(3px);
+    display: none;
+
+
 }

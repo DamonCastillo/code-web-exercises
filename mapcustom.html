@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Poiret+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/mapcustom.css">
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.css' rel='stylesheet'/>
+
+</head>
+<body>
+<script src="js/jquery.js"></script>
+<script src="js/keys.js"></script>
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js'></script>
+<script src="js/geocode-utils.js"></script>
+
+
+<div class="container">
+    <div class="current-info">
+
+        <div class="date-container">
+            <div class="time" id="time">
+                12:30 <span id="am-pm">PM</span>
+            </div>
+            <div class="date" id="date">
+                Monday, 24 May
+            </div>
+
+        </div>
+        <div class="search-container">
+            <div class="card" id="current-weather-items">
+                <div class="search">
+                    <input type="text" class="search-bar">
+                    <button><img src="/img/magnifying-glass-solid.svg" alt=""></button>
+                </div>
+                <div class="weather loading">
+                    <h2 class="city">Weather in San Antonio</h2>
+                    <h1 class="temp">51°F</h1>
+                    <div class="flex">
+                        <img src="https://openweathermap.org/img/wn/04n.png" alt="" class="icon"/>
+                        <div class="description">Cloudy</div>
+                    </div>
+                    <div class="humidity">Humidity: 60%</div>
+                    <div class="wind">Wind speed: 6.2 km/h</div>
+                    <div id="place" class="country" style="font-size: 15px; margin-top:10px  ">US</div>
+                </div>
+            </div>
+        </div>
+        <div class="place-container">
+        </div>
+    </div>
+</div>
+<div id='map' class="map-style"></div>
+<div class="future-forecast">
+    <div class="weather-forecast" id="weather-forecast">
+        <div class="weather-forecast-item">
+            <div class="day">Tuesday</div>
+            <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
+
+            <div class="temp">Night - 25.6&#176; C</div>
+            <div class="temp">Day - 35.6&#176; C</div>
+        </div>
+        <div class="weather-forecast-item">
+            <div class="day">Wednesday</div>
+            <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
+            <div class="temp">Night - 25.6&#176; C</div>
+            <div class="temp">Day - 35.6&#176; C</div>
+        </div>
+        <div class="weather-forecast-item">
+            <div class="day">Thursday</div>
+            <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
+            <div class="temp">Night - 25.6&#176; C</div>
+            <div class="temp">Day - 35.6&#176; C</div>
+        </div>
+        <div class="weather-forecast-item">
+            <div class="day">Friday</div>
+            <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
+            <div class="temp">Night - 25.6&#176; C</div>
+            <div class="temp">Day - 35.6&#176; C</div>
+        </div>
+        <div class="weather-forecast-item">
+            <div class="day">Saturday</div>
+            <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
+            <div class="temp">Night - 25.6&#176; C</div>
+            <div class="temp">Day - 35.6&#176; C</div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    mapboxgl.accessToken = MAP_API_KEY;
+    const map = new mapboxgl.Map({
+        container: 'map', // container ID
+        style: 'mapbox://styles/mapbox/navigation-night-v1', // style URL
+        center: [-98.4946, 29.4252], // starting position [lng, lat]
+        zoom: 9 // starting zoom
+    });
+
+    // Create a new marker.
+    const marker = new mapboxgl.Marker()
+        .setLngLat([-98.4946, 29.4252])
+        .setDraggable(true)
+        .addTo(map)
+    ;
+
+
+    marker.setLngLat([-98.4946, 29.4252])
+
+    marker.setLngLat([-98.4946, 29.4252])
+    reverseGeocode({lat: 52.3353, lng: 4.8659}, MAP_API_KEY).then(function (location) {
+        console.log(location)
+    })
+
+    let LONG_LAT = []
+
+    marker.on("dragend", function () {
+        LONG_LAT = marker.getLngLat();
+        document.getElementById('place').innerHTML = LONG_LAT.lng + " ," + LONG_LAT.lat;
+        map.flyTo({center: [LONG_LAT.lng, LONG_LAT.lat]})
+        reverseGeocode(LONG_LAT, MAP_API_KEY).then(function (data) {
+            document.getElementById("place").innerHTML = data
+        })
+    })
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.3/moment.min.js" integrity="" crossorigin="anonymous"
+        referrerpolicy="no-referrer"></script>
+<script src="js/mapcustom.js"></script>
+
+
+</body>
+</html>
