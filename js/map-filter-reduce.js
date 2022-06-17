@@ -72,8 +72,8 @@ console.log(longEmail)
 
 //reduce to get a list of user's name in a single string
 
-let nameString = users.reduce(function (prevVal, currVal, idx) {
-    return idx === 0 ? currVal.name : prevVal + ', ' + currVal.name;
+let nameString = users.reduce(function (str, user, idx) {
+    return idx === 0 ? user.name : str + ', ' + user.name;
 }, '')
 console.log(`Your Instructors are ${nameString}.`);
 
@@ -88,3 +88,13 @@ let unique = users.map(function (user){
      let uniLang  = user.languages.concat()
     console.log(uniLang)
 })
+
+
+const uniqueLang = users.reduce((langs,user)=>{
+    for (let lang of user.languages){
+        if (!langs.includes(lang)){
+            langs.push(lang)
+        }
+    }return langs
+}, [])
+console.log(uniqueLang);
