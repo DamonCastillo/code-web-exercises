@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.css' rel='stylesheet'/>
+    <script src="js/geocode-utils.js"></script>
+    <link rel="stylesheet" href="css/map.css">
+    <script src="js/keys.js"></script>
+    <script src="js/jquery.js"></script>
+</head>
+
+<body>
+<nav>
+    <form class="d-flex w-50">
+        <input class="form-control me-2" type="search" placeholder="Search for Yums" aria-label="Search">
+        <button class="btn" type="button">
+        </button>
+    </form>
+
+</nav>
+<div>
+    <div class="map">
+        <div id='map' style='width: 65vw; height: 65vh; margin: auto'></div>
+    </div>
+    <div class="coordinates">
+        <h1 id="place"></h1>
+    </div>
+</div>
+<script>
+
+    let yums = [yum1 = {name: "bluepoke", address: "1325 E Plaza Blvd Ste 103, National City, CA 91950"},
+        yum2 = {name: "pho thien an", address: "126 W Rector Dr #108, San Antonio, TX 78216"},
+        yum3 = {name: "Brasão Brazilian Steakhouse", address: "19210 W I-10, San Antonio, TX 78257"}]
+
+
+    $(".btn").click(function () {
+       let input = $("input").val()
+        if(input === yums[0].name){
+            mapboxgl.accessToken = MAP_API_KEY;
+            const map = new mapboxgl.Map({
+                container: 'map', // container ID
+                style: 'mapbox://styles/mapbox/streets-v11', // style URL
+                center: [-117.0921, 32.6774], // starting position [lng, lat]
+                zoom: 11 // starting zoom
+            });
+
+            // Create a new marker.
+            const marker = new mapboxgl.Marker()
+                .setLngLat([-117.0921, 32.6774])
+                .setDraggable(true)
+                .addTo(map)
+            ;
+            marker.setLngLat([-117.0921, 32.6774])
+
+
+            const popup = new mapboxgl.Popup()
+                .setHTML("<p> Yum Yum </p>");
+
+            marker.setPopup(popup)
+        }
+        if(input === yums[1].name){
+            mapboxgl.accessToken = MAP_API_KEY;
+            const map = new mapboxgl.Map({
+                container: 'map', // container ID
+                style: 'mapbox://styles/mapbox/streets-v11', // style URL
+                center: [-98.495155, 29.516697], // starting position [lng, lat]
+                zoom: 11 // starting zoom
+            });
+
+            // Create a new marker.
+            const marker = new mapboxgl.Marker()
+                .setLngLat([-98.495155, 29.516697])
+                .setDraggable(true)
+                .addTo(map)
+            ;
+            marker.setLngLat([-98.495155, 29.516697])
+
+
+            const popup = new mapboxgl.Popup()
+                .setHTML("<p> Yum Yum </p>");
+
+            marker.setPopup(popup)
+
+        }
+        if(input === yums[2].name) {
+            mapboxgl.accessToken = MAP_API_KEY;
+            const map = new mapboxgl.Map({
+                container: 'map', // container ID
+                style: 'mapbox://styles/mapbox/streets-v11', // style URL
+                center: [-98.6072, 29.6207], // starting position [lng, lat]
+                zoom: 11 // starting zoom
+            });
+
+            // Create a new marker.
+            const marker = new mapboxgl.Marker()
+                .setLngLat([-98.6072, 29.6207])
+                .setDraggable(true)
+                .addTo(map)
+            ;
+            marker.setLngLat([-98.6072, 29.6207])
+
+
+            const popup = new mapboxgl.Popup()
+                .setHTML("<p> Yum Yum </p>");
+
+            marker.setPopup(popup)
+        }
+    })
+
+
+    mapboxgl.accessToken = MAP_API_KEY;
+    const map = new mapboxgl.Map({
+        container: 'map', // container ID
+        style: 'mapbox://styles/mapbox/streets-v11', // style URL
+        center: [-117.0921, 32.6774], // starting position [lng, lat]
+        zoom: 13 // starting zoom
+    });
+    const marker = new mapboxgl.Marker()
+        .setLngLat([-117.0921, 32.6774])
+        .setDraggable(true)
+        .addTo(map)
+        .setHTML("<p> yummy unlimited meat")
+    ;
+    marker.setLngLat([-117.0921, 32.6774])
+
+
+    geocode("1325 E Plaza Blvd Ste 103, National City, CA 91950", MAP_API_KEY).then(function (info) {
+        console.log(info);
+        const POPUP_TOYOTA = new mapboxgl.Popup()
+            .setLngLat(info)
+            .setHTML("<p> This is where I like to eat poke")
+            .addTo(map)
+    })
+
+    reverseGeocode({lat: 52.3353, lng: 4.8659}, MAP_API_KEY).then(function (location) {
+        console.log(location)
+    })
+
+    let LONG_LAT = []
+
+    marker.on("dragend", function () {
+        LONG_LAT = marker.getLngLat();
+        document.getElementById('place').innerHTML = LONG_LAT.lng + " ," + LONG_LAT.lat;
+        map.flyTo({center: [LONG_LAT.lng, LONG_LAT.lat]})
+        reverseGeocode(LONG_LAT, MAP_API_KEY).then(function (data) {
+            document.getElementById("place").innerHTML = data
+        })
+
+
+    })
+</script>
+</body>
+</html>

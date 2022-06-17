@@ -30,7 +30,7 @@ let weather = {
     apiKey: OPEN_WEATHER_KEY,
     fetchWeather: function (city) {
         fetch(
-            "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial&appid=" + this.apiKey )
+            "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial&appid=" + this.apiKey)
             .then((response) => {
                 if (!response.ok) {
                     alert("No weather found.");
@@ -41,11 +41,13 @@ let weather = {
             .then((data) => this.displayWeather(data));
     },
     displayWeather: function (data) {
-        const { name } = data;
-        const { icon, description } = data.weather[0];
-        const { temp, humidity } = data.main;
-        const { speed } = data.wind;
-        const { day } = data.dt;
+        const {name} = data;
+        const {icon, description} = data.weather[0];
+        const {temp, humidity} = data.main;
+        const {speed} = data.wind;
+        const {day} = data.dt;
+
+
 
         document.querySelector(".city").innerText = "Weather in " + name;
         document.querySelector(".icon").src =
@@ -59,7 +61,24 @@ let weather = {
         document.querySelector(".weather").classList.remove("loading");
         document.body.style.backgroundImage =
             "url('https://source.unsplash.com/1600x900/?" + name + "')";
+        document.querySelector(".temp").innerText =
+            "Day:" + temp + "°F";
+    },
+    displayFutureWeather: function (data){
+        let futureCard = data.map((data) => {
+            return `
+             <div class="weather-forecast-item">
+                <div class="day">Tuesday</div>
+                <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
+                <div class="temp">Day - ${temp} &#176; F</div>
+                <div class="temp">Night - 25.6&#176; F</div>
+            </div>
+            `
 
+
+
+
+        })
     },
 
     search: function () {
@@ -72,10 +91,10 @@ document.querySelector(".search button").addEventListener("click", function () {
 });
 
 document.querySelector(".search-bar").addEventListener("keyup", function (event) {
-        if (event.key == "Enter") {
-            weather.search();
-        }
-    });
+    if (event.key === "Enter") {
+        weather.search();
+    }
+});
 
 weather.fetchWeather("San Antonio");
 

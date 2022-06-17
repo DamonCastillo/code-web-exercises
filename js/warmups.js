@@ -187,6 +187,11 @@
     // return obj;
 
 
+// function sayHello(name) {
+//     return 'Hello, ' + name + '!';
+// }
 
-console.log(10 % 3);
+let numbers = [1, 2, 3, 4, 5];
+
+console.log(numbers.map(n => n * 3))
 
